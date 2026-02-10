@@ -2,140 +2,205 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Nossa História</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Nossa História</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #fff0f5;
-      text-align: center;
-      padding: 40px;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
 
-    h1, h2 {
-      color: #c2185b;
-    }
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #ffb347, #ff7e5f, #1a1a1a);
+  color: #f5f5f5;
+  overflow-x: hidden;
+}
 
-    p {
-      font-size: 18px;
-      color: #444;
-      max-width: 800px;
-      margin: 20px auto;
-      line-height: 1.6;
-      white-space: pre-line;
-    }
-  </style>
+/* ☀️ SOL */
+.sun {
+  position: fixed;
+  top: -120px;
+  right: -120px;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, #fff3b0, #ffcc33, #ff9f1c);
+  border-radius: 50%;
+  filter: blur(2px);
+  opacity: 0.85;
+}
+
+/* 🌸 FLOR */
+.flower {
+  position: fixed;
+  bottom: -40px;
+  left: -40px;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle at center, #ff6f91 20%, #ff9671 45%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(1px);
+  opacity: 0.7;
+}
+
+/* 🐦 BEIJA-FLOR */
+.bird {
+  position: fixed;
+  top: 120px;
+  left: -120px;
+  font-size: 3rem;
+  animation: fly 18s linear infinite;
+}
+
+@keyframes fly {
+  0% { transform: translateX(-150px) translateY(0); }
+  50% { transform: translateX(120vw) translateY(-80px); }
+  100% { transform: translateX(-150px) translateY(0); }
+}
+
+/* ❤️ CORAÇÃO */
+.heart {
+  font-size: 2.5rem;
+  animation: pulse 1.5s infinite;
+  display: inline-block;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px;
+  background: rgba(0,0,0,0.55);
+  border-radius: 25px;
+  box-shadow: 0 0 60px rgba(0,0,0,0.6);
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.8em;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+.story {
+  font-size: 1.2em;
+  line-height: 2;
+  text-align: justify;
+  white-space: pre-line;
+}
+
+.counter {
+  margin-top: 50px;
+  padding: 30px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 18px;
+  text-align: center;
+}
+
+.counter h2 {
+  font-size: 1.9em;
+  margin-bottom: 15px;
+}
+
+#tempo-juntos {
+  font-size: 1.3em;
+  line-height: 1.7;
+}
+
+footer {
+  margin-top: 50px;
+  text-align: center;
+  opacity: 0.7;
+}
+</style>
 </head>
 
 <body>
 
-<h1>Nossa história  
-na minha versão</h1>
+<div class="sun"></div>
+<div class="flower"></div>
+<div class="bird">🐦</div>
 
-<p>
-Eu achava que estava no meu auge  
-me sentia invencível  
-convencido até  
+<div class="container">
+  <h1>Nossa História <span class="heart">❤️</span></h1>
 
-mas no fundo  
-só queria alguém pra vida  
+  <div class="story">
+Não foi algo planejado.
+Não foi algo ensaiado.
+Simplesmente aconteceu.
 
-frequentava a igreja  
-me sentia julgado  
-me sentia perdido  
+Entre conversas que começaram sem rumo,
+silêncios que diziam mais do que qualquer frase,
+e dias comuns que, sem aviso, se tornaram especiais.
 
-até que numa vigília  
-vi você  
+O tempo passou.
+2021 virou 2022.
+E mesmo quando tudo parecia seguir em direções diferentes,
+alguma coisa sempre permanecia.
 
-um brilho que não pedia explicação  
+A presença.
+O cuidado.
+A lembrança que insistia em voltar.
 
-te vi ir à frente receber oração  
-e ali algo mudou em mim  
+Houve distância.
+Houve incerteza.
+Houve dias em que o mundo parecia barulhento demais.
 
-consegui seu contato  
-te chamei  
-você respondeu distante  
+Mas mesmo assim, algo sempre chamava de volta.
+Como se a vida sussurrasse:
+“É aqui.”
 
-mas eu voltei  
-e lá estava você  
-mais radiante  
-cantando como ninguém  
+Hoje, olhar para trás não dói.
+Hoje faz sentido.
+Cada conversa, cada espera, cada passo lento.
 
-me perdi entre conversas  
-apelidos  
-brincadeiras  
+Porque algumas histórias não começam com promessas.
+Começam com verdade.
 
-me apaixonei  
+E continuam…
+porque valem a pena.
+  </div>
 
-quando falei o que sentia  
-fui bloqueado  
-e chorei  
+  <div class="counter">
+    <h2>O tempo que já vivemos</h2>
+    <p id="tempo-juntos">Carregando...</p>
+  </div>
 
-esperei  
-pedi perdão  
-até que um dia sua foto voltou  
-
-recomeçamos  
-
-na virada de 2021 pra 2022  
-adoeci  
-e o silêncio chegou  
-
-sete meses sem nós  
-
-até voltarmos  
-diferentes  
-mais maduros  
-e nos amando dobrado  
-
-desde então  
-cada dia com você é um sonho  
-
-e hoje eu sei  
-flores não bastam  
-textos não alcançam  
-
-eu te amo além do que se mede  
-
-minha morena  
-
-eu te escolhi no encanto  
-te esperei no silêncio  
-e te amo na certeza  
-
-sempre você
-</p>
-
-<h2>Nosso tempo juntos</h2>
-
-<p id="tempo-juntos"></p>
+  <footer>
+    Algumas histórias não precisam de fim 🌸
+  </footer>
+</div>
 
 <script>
-  const inicio = new Date("2021-10-20T00:00:00");
+const inicio = new Date("2021-10-20T00:00:00");
+
+function atualizarTempo() {
   const agora = new Date();
+  const diff = agora - inicio;
 
-  let anos = agora.getFullYear() - inicio.getFullYear();
-  let meses = agora.getMonth() - inicio.getMonth();
-  let dias = agora.getDate() - inicio.getDate();
+  const horasTotais = Math.floor(diff / (1000 * 60 * 60));
+  const diasTotais = Math.floor(horasTotais / 24);
 
-  if (dias < 0) {
-    meses--;
-    dias += new Date(agora.getFullYear(), agora.getMonth(), 0).getDate();
-  }
-
-  if (meses < 0) {
-    anos--;
-    meses += 12;
-  }
-
-  const diferencaMs = agora - inicio;
-  const horasTotais = Math.floor(diferencaMs / (1000 * 60 * 60));
+  const anos = Math.floor(diasTotais / 365);
+  const meses = Math.floor((diasTotais % 365) / 30);
+  const dias = (diasTotais % 365) % 30;
+  const horas = horasTotais % 24;
 
   document.getElementById("tempo-juntos").innerText =
-    `Hoje fazem exatamente ${anos * 12 + meses} meses, ${dias} dias e ${horasTotais % 24} horas que vivo um sonho.
-Te amo pra todo sempre.`;
+    `Já se passaram ${anos} anos, ${meses} meses, ${dias} dias e ${horas} horas.\n\nE ainda parece só o começo.`;
+}
+
+atualizarTempo();
+setInterval(atualizarTempo, 60000);
 </script>
 
 </body>
