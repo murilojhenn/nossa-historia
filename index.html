@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -13,30 +14,129 @@
       padding: 40px;
     }
 
-    h1 {
+    h1, h2 {
       color: #c2185b;
     }
 
     p {
       font-size: 18px;
       color: #444;
-      max-width: 600px;
+      max-width: 800px;
       margin: 20px auto;
+      line-height: 1.6;
+      white-space: pre-line;
     }
   </style>
 </head>
 
 <body>
-  <h1>Nossa História 💕</h1>
 
-  <p>
-    Aqui começa a nossa história.<br>
-    Cada momento, cada conversa e cada sorriso ficam guardados aqui.
-  </p>
+<h1>Nossa história  
+na minha versão</h1>
 
-  <p>
-    Esse site é um pedacinho do que a gente viveu<br>
-    e do que ainda vamos viver ✨
-  </p>
+<p>
+Eu achava que estava no meu auge  
+me sentia invencível  
+convencido até  
+
+mas no fundo  
+só queria alguém pra vida  
+
+frequentava a igreja  
+me sentia julgado  
+me sentia perdido  
+
+até que numa vigília  
+vi você  
+
+um brilho que não pedia explicação  
+
+te vi ir à frente receber oração  
+e ali algo mudou em mim  
+
+consegui seu contato  
+te chamei  
+você respondeu distante  
+
+mas eu voltei  
+e lá estava você  
+mais radiante  
+cantando como ninguém  
+
+me perdi entre conversas  
+apelidos  
+brincadeiras  
+
+me apaixonei  
+
+quando falei o que sentia  
+fui bloqueado  
+e chorei  
+
+esperei  
+pedi perdão  
+até que um dia sua foto voltou  
+
+recomeçamos  
+
+na virada de 2021 pra 2022  
+adoeci  
+e o silêncio chegou  
+
+sete meses sem nós  
+
+até voltarmos  
+diferentes  
+mais maduros  
+e nos amando dobrado  
+
+desde então  
+cada dia com você é um sonho  
+
+e hoje eu sei  
+flores não bastam  
+textos não alcançam  
+
+eu te amo além do que se mede  
+
+minha morena  
+
+eu te escolhi no encanto  
+te esperei no silêncio  
+e te amo na certeza  
+
+sempre você
+</p>
+
+<h2>Nosso tempo juntos</h2>
+
+<p id="tempo-juntos"></p>
+
+<script>
+  const inicio = new Date("2021-10-20T00:00:00");
+  const agora = new Date();
+
+  let anos = agora.getFullYear() - inicio.getFullYear();
+  let meses = agora.getMonth() - inicio.getMonth();
+  let dias = agora.getDate() - inicio.getDate();
+
+  if (dias < 0) {
+    meses--;
+    dias += new Date(agora.getFullYear(), agora.getMonth(), 0).getDate();
+  }
+
+  if (meses < 0) {
+    anos--;
+    meses += 12;
+  }
+
+  const diferencaMs = agora - inicio;
+  const horasTotais = Math.floor(diferencaMs / (1000 * 60 * 60));
+
+  document.getElementById("tempo-juntos").innerText =
+    `Hoje fazem exatamente ${anos * 12 + meses} meses, ${dias} dias e ${horasTotais % 24} horas que vivo um sonho.
+Te amo pra todo sempre.`;
+</script>
+
 </body>
 </html>
