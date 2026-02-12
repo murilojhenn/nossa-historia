@@ -2,225 +2,180 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Nossa História</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nossa História ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-body {
-  min-height: 100vh;
-  background: radial-gradient(circle at top, #ffcc66, #ff8c42, #141414 65%);
-  color: #f5f5f5;
-  overflow-x: hidden;
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+color:white;
+overflow-x:hidden;
 }
 
-/* ☀️ SOL */
-.sun {
-  position: fixed;
-  top: -150px;
-  right: -150px;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, #fff7c7, #ffd54f, #ff9800);
-  border-radius: 50%;
-  opacity: 0.9;
-  z-index: -1;
+section{
+padding:80px 20px;
+text-align:center;
 }
 
-/* ❤️ CORAÇÃO */
-.heart {
-  display: inline-block;
-  animation: pulse 1.6s infinite;
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),
+url('https://images.unsplash.com/photo-1519681393784-d120267933ba');
+background-size:cover;
+background-position:center;
 }
 
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.25); }
-  100% { transform: scale(1); }
+.hero h1{
+font-family:'Playfair Display',serif;
+font-size:3rem;
+margin-bottom:20px;
 }
 
-.container {
-  max-width: 900px;
-  margin: 80px auto;
-  padding: 45px;
-  background: rgba(0,0,0,0.6);
-  border-radius: 28px;
-  box-shadow: 0 0 80px rgba(0,0,0,0.7);
+.hero p{
+font-size:1.2rem;
+opacity:0.8;
 }
 
-h1 {
-  text-align: center;
-  font-size: 3em;
-  margin-bottom: 40px;
-  letter-spacing: 2px;
+button{
+margin-top:20px;
+padding:12px 25px;
+border:none;
+border-radius:30px;
+background:#ff4b91;
+color:white;
+cursor:pointer;
+font-size:1rem;
+transition:0.3s;
 }
 
-.story {
-  font-size: 1.23em;
-  line-height: 2.1;
-  text-align: justify;
-  white-space: pre-line;
+button:hover{
+transform:scale(1.05);
+background:#ff2e7a;
 }
 
-.counter {
-  margin-top: 60px;
-  padding: 35px;
-  background: rgba(255,255,255,0.08);
-  border-radius: 20px;
-  text-align: center;
+.contador{
+font-size:2rem;
+margin-top:20px;
+font-weight:600;
+color:#ff4b91;
 }
 
-.counter h2 {
-  font-size: 2em;
-  margin-bottom: 18px;
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:40px;
 }
 
-#tempo-juntos {
-  font-size: 1.35em;
-  line-height: 1.9;
+.gallery img{
+width:100%;
+border-radius:15px;
+transition:0.4s;
+cursor:pointer;
 }
 
-/* 💍 ALIANÇAS HOLOGRÁFICAS */
-.hologram {
-  margin-top: 80px;
-  text-align: center;
+.gallery img:hover{
+transform:scale(1.05);
 }
 
-.rings {
-  font-size: 5.2rem;
-  letter-spacing: 18px;
-  animation: glow 3s infinite alternate;
+.footer{
+padding:40px;
+background:#111;
+opacity:0.8;
 }
 
-@keyframes glow {
-  from {
-    text-shadow: 0 0 10px #8be9fd, 0 0 30px #50fa7b;
-  }
-  to {
-    text-shadow: 0 0 30px #ff79c6, 0 0 70px #bd93f9;
-  }
-}
-
-.hologram-text {
-  margin-top: 30px;
-  font-size: 1.35em;
-  line-height: 2;
-  opacity: 0.95;
-}
-
-footer {
-  margin-top: 70px;
-  text-align: center;
-  opacity: 0.75;
-  font-size: 0.95em;
+iframe{
+margin-top:20px;
+border-radius:15px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="sun"></div>
+<section class="hero">
+<h1>Desde 20/10/2021 ❤️</h1>
+<p>Você é assim, um sonho pra mim...</p>
 
-<div class="container">
-  <h1>Nossa História <span class="heart">❤️</span></h1>
+<button onclick="tocarMusica()">Tocar Nossa Música 🎵</button>
 
-  <div class="story">
-Não foi algo planejado.
-Não foi algo ensaiado.
-Simplesmente aconteceu.
+<div class="contador" id="contador"></div>
+</section>
 
-Em 2021, eu acreditava estar no meu auge.
-Ou pelo menos era o que eu achava.
-Eu me sentia capaz de conquistar o mundo, mesmo sem perceber o quanto ainda estava perdido.
+<section>
+<h2>Nossa História ✨</h2>
+<p style="max-width:600px;margin:20px auto;">
+Desde aquele dia tudo mudou. Cada momento ao seu lado é especial.
+Cada sorriso, cada abraço, cada sonho compartilhado.
+Eu penso em você desde o amanhecer ❤️
+</p>
+</section>
 
-No meio de tantas certezas vazias, eu só queria alguém.
-Alguém de verdade.
+<section>
+<h2>Nossos Momentos 📸</h2>
 
-Até que um dia, em meio à fé, dúvidas e julgamentos silenciosos,
-um rosto diferente apareceu.
-Um brilho que não se explicava.
-Um olhar que parou tudo.
+<div class="gallery">
+<img src="foto1.jpg">
+<img src="foto2.jpg">
+<img src="foto3.jpg">
+<img src="foto4.jpg">
+<img src="foto5.jpg">
+<img src="foto6.jpg">
+<img src="foto7.jpg">
+<img src="foto8.jpg">
+<img src="foto9.jpg">
+<img src="foto10.jpg">
+</div>
 
-O tempo passou.
-2022 chegou.
-Depois 2023.
-2024.
-2025.
-2026.
+<div id="musica"></div>
 
-E mesmo quando houve distância,
-mesmo quando o silêncio tentou vencer,
-algo sempre permaneceu.
+</section>
 
-A lembrança.
-O cuidado.
-O amor que cresceu mesmo separado.
-
-Quando voltamos, já não éramos os mesmos.
-Éramos mais fortes.
-Mais conscientes.
-Mais apaixonados.
-
-Cada reencontro trouxe o frio na barriga.
-Cada abraço confirmou a escolha.
-Cada dia juntos transformou o comum em extraordinário.
-
-Hoje eu sei:
-existem amores que não gritam.
-Eles permanecem.
-
-E é por isso que, mesmo que palavras não consigam explicar,
-eu sigo certo de uma coisa:
-
-Essa história não terminou.
-Ela está apenas começando.
-E será para sempre.
-  </div>
-
-  <div class="counter">
-    <h2>O tempo que já vivemos juntos</h2>
-    <p id="tempo-juntos">Carregando...</p>
-  </div>
-
-  <div class="hologram">
-    <div class="rings">💍 💍</div>
-    <div class="hologram-text">
-      Nossa história ganhará capítulos ainda mais extraordinários aqui.
-    </div>
-  </div>
-
-  <footer>
-    Feito com amor, para eternizar o que é real.
-  </footer>
+<div class="footer">
+Feito com ❤️ para o amor da minha vida
 </div>
 
 <script>
-const inicio = new Date("2021-10-20T00:00:00");
+// CONTADOR
+const dataInicio = new Date("2021-10-20T00:00:00");
 
-function atualizarTempo() {
-  const agora = new Date();
-  const diff = agora - inicio;
+function atualizarContador(){
+const agora = new Date();
+const diferenca = agora - dataInicio;
 
-  const horasTotais = Math.floor(diff / (1000 * 60 * 60));
-  const diasTotais = Math.floor(horasTotais / 24);
+const dias = Math.floor(diferenca / (1000*60*60*24));
+const horas = Math.floor((diferenca / (1000*60*60)) % 24);
+const minutos = Math.floor((diferenca / (1000*60)) % 60);
+const segundos = Math.floor((diferenca / 1000) % 60);
 
-  const anos = Math.floor(diasTotais / 365);
-  const meses = Math.floor((diasTotais % 365) / 30);
-  const dias = (diasTotais % 365) % 30;
-  const horas = horasTotais % 24;
-
-  document.getElementById("tempo-juntos").innerText =
-    `Hoje fazem exatamente ${anos} anos, ${meses} meses, ${dias} dias e ${horas} horas que vivo um sonho.\nTe amo pra todo sempre.`;
+document.getElementById("contador").innerHTML =
+`${dias} dias, ${horas}h ${minutos}m ${segundos}s juntos ❤️`;
 }
 
-atualizarTempo();
-setInterval(atualizarTempo, 60000);
+setInterval(atualizarContador,1000);
+atualizarContador();
+
+// MUSICA
+function tocarMusica(){
+document.getElementById("musica").innerHTML =
+`<iframe width="300" height="200"
+src="https://www.youtube.com/embed/izGwDsrQ1eQ?autoplay=1"
+allow="autoplay">
+</iframe>`;
+}
 </script>
 
 </body>
